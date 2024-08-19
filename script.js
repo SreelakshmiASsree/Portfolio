@@ -53,38 +53,38 @@ if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.match
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    let slideIndex = 0;
-    const slides = document.querySelectorAll(".slide");
-    const totalSlides = slides.length;
+// document.addEventListener("DOMContentLoaded", function () {
+//     let slideIndex = 0;
+//     const slides = document.querySelectorAll(".slide");
+//     const totalSlides = slides.length;
 
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.classList.add('hidden');
-            if (i === index) {
-                slide.classList.remove('hidden');
-            }
-        });
+//     function showSlide(index) {
+//         slides.forEach((slide, i) => {
+//             slide.classList.add('hidden');
+//             if (i === index) {
+//                 slide.classList.remove('hidden');
+//             }
+//         });
 
-        // Disable/enable buttons based on the slide index
-        document.getElementById('prevButton').disabled = index === 0;
-        document.getElementById('nextButton').disabled = index === totalSlides - 1;
-    }
+//         // Disable/enable buttons based on the slide index
+//         document.getElementById('prevButton').disabled = index === 0;
+//         document.getElementById('nextButton').disabled = index === totalSlides - 1;
+//     }
 
-    document.getElementById('prevButton').addEventListener('click', function () {
-        if (slideIndex > 0) {
-            slideIndex--;
-            showSlide(slideIndex);
-        }
-    });
+//     document.getElementById('prevButton').addEventListener('click', function () {
+//         if (slideIndex > 0) {
+//             slideIndex--;
+//             showSlide(slideIndex);
+//         }
+//     });
 
-    document.getElementById('nextButton').addEventListener('click', function () {
-        if (slideIndex < totalSlides - 1) {
-            slideIndex++;
-            showSlide(slideIndex);
-        }
-    });
+//     document.getElementById('nextButton').addEventListener('click', function () {
+//         if (slideIndex < totalSlides - 1) {
+//             slideIndex++;
+//             showSlide(slideIndex);
+//         }
+//     });
 
    
-    showSlide(slideIndex);
-});
+//     showSlide(slideIndex);
+// });
